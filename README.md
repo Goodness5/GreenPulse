@@ -1,141 +1,114 @@
-# Eliza 🤖
+# **GreenPulse: An Ai for Climate Awareness**
 
-<div align="center">
-  <img src="./docs/static/img/eliza_banner.jpg" alt="Eliza Banner" width="100%" />
-</div>
+## **Overview**
+GreenPulse is an Ai designed to raise awareness about climate change by tracking real-time carbon dioxide (CO₂) levels and sharing educational content. It uses data-driven insights and engaging posts to inform users about the impacts of rising carbon emissions and inspire them to take action for a sustainable future.
+[Pitchdeck:](https://www.canva.com/design/DAF2DD9OqjI/CHMWxxppIZiTZ_9O5mQbSA/edit?utm_content=DAF2DD9OqjI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+---
 
-<div align="center">
+## **Features**
 
-📖 [Documentation](https://elizaos.github.io/eliza/) | 🎯 [Examples](https://github.com/thejoven/awesome-eliza)
+### **1. Real-Time Carbon Tracking**
+- **Automated Updates**: GreenPulse posts regular updates about global atmospheric CO₂ levels.
+- **Environmental Context**: Each update includes explanations of how carbon trends affect climate patterns, weather, and ecosystems.
 
-</div>
+### **2. Educational Content**
+- **Bite-Sized Facts**: Shares easy-to-understand facts about climate change, carbon footprints, and sustainable living.
+- **Tips and Solutions**: Offers actionable advice, such as energy-saving habits or ways to reduce emissions.
+- **Myth-Busting**: Dispels common misconceptions about climate change.
 
-## 🌍 README Translations
+### **3. Data Visualizations**
+- **Graphs and Charts**: Posts visual representations of CO₂ trends over time.
+- **Infographics**: Simplifies complex climate data into visually engaging and shareable formats.
 
-[中文说明](./README_CN.md) | [日本語の説明](./README_JA.md) | [한국어 설명](./README_KOR.md) | [Français](./README_FR.md) | [Português](./README_PTBR.md) | [Türkçe](./README_TR.md) | [Русский](./README_RU.md) | [Español](./README_ES.md) | [Italiano](./README_IT.md) | [ไทย](./README_TH.md) | [Deutsch](./README_DE.md) | [Tiếng Việt](./README_VI.md) | [עִברִית](https://github.com/elizaos/Elisa/blob/main/README_HE.md) | [Tagalog](./README_TG.md)
+### **4. Interactive Engagement**
+- **Q&A Feature**: Responds to user questions on climate-related topics.
+- **Personalized Tips**: Suggests specific actions individuals can take to contribute to climate solutions.
 
-## ✨ Features
+---
 
-- 🛠️ Full-featured Discord, Twitter and Telegram connectors
-- 🔗 Support for every model (Llama, Grok, OpenAI, Anthropic, etc.)
-- 👥 Multi-agent and room support
-- 📚 Easily ingest and interact with your documents
-- 💾 Retrievable memory and document store
-- 🚀 Highly extensible - create your own actions and clients
-- ☁️ Supports many models (local Llama, OpenAI, Anthropic, Groq, etc.)
-- 📦 Just works!
+## **Why GreenPulse?**
+GreenPulse addresses the need for accessible, reliable, and engaging climate information. By leveraging automation and social media, it connects users to critical data and encourages collective action to combat climate change.
 
-## Video Tutorials
+### **Key Benefits**:
+- **Accessibility**: Makes scientific data and climate insights easy to understand for everyone.
+- **Empowerment**: Inspires individuals to take steps toward sustainability.
+- **Community Building**: Sparks conversations around climate issues and encourages collaboration.
 
-[AI Agent Dev School](https://www.youtube.com/watch?v=ArptLpQiKfI&list=PLx5pnFXdPTRzWla0RaOxALTSTnVq53fKL)
+---
 
-## 🎯 Use Cases
+## **How It Works**
 
-- 🤖 Chatbots
-- 🕵️ Autonomous Agents
-- 📈 Business Process Handling
-- 🎮 Video Game NPCs
-- 🧠 Trading
+1. **Data Collection**:
+   GreenPulse retrieves real-time CO₂ level data from trusted sources like NASA, NOAA, or other open climate databases.
 
-## 🚀 Quick Start
+2. **Content Generation**:
+   The bot uses algorithms to analyze the data and generate informative, engaging posts that highlight trends and their implications.
 
-### Prerequisites
+3. **Automated Posting**:
+   GreenPulse schedules posts for optimal engagement, ensuring timely updates for its audience.
 
-- [Python 2.7+](https://www.python.org/downloads/)
-- [Node.js 23+](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-- [pnpm](https://pnpm.io/installation)
+4. **User Interaction**:
+   - Users can tweet questions to GreenPulse, and it responds with accurate, curated information.
+   - Personalized tips are generated based on user queries.
 
-> **Note for Windows Users:** [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install-manual) is required.
+---
 
-### Use the Starter (Recommended)
+## **Getting Started**
 
+### **1. Prerequisites**
+- A Twitter Developer Account to set up API access.
+- Basic knowledge of Python and Twitter API.
+
+### **2. Installation**
+Clone the GreenPulse repository:
 ```bash
-git clone https://github.com/elizaos/eliza-starter.git
-cd eliza-starter
-cp .env.example .env
-pnpm i && pnpm build && pnpm start
+git clone https://github.com/goodness5/greenpulse.git
+cd greenpulse
 ```
-Once the agent is running, You should see the message to run "pnpm start:client" at the end.
-Open another terminal and move to same directory and then run below command and follow the URL to chat to your agent. 
+
+### **3. Configuration**
+- Add your Twitter API credentials to the `.env` file:
 ```bash
-pnpm start:client
+CONSUMER_KEY=your_consumer_key
+CONSUMER_SECRET=your_consumer_secret
+ACCESS_TOKEN=your_access_token
+ACCESS_TOKEN_SECRET=your_access_token_secret
 ```
 
-Then read the [Documentation](https://elizaos.github.io/eliza/) to learn how to customize your Eliza.
+- Configure the climate data API settings in `config.py`.
 
-### Manually Start Eliza (Only recommended if you know what you are doing)
-
+### **4. Run the Bot**
+Activate the bot using the following command:
 ```bash
-# Clone the repository
-git clone https://github.com/elizaos/eliza.git
-
-# Checkout the latest release
-# This project iterates fast, so we recommend checking out the latest release
-git checkout $(git describe --tags --abbrev=0)
+python greenpulse.py
 ```
 
-### Start Eliza with Gitpod
+---
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/elizaos/eliza/tree/main)
+## **Contributing**
+We welcome contributions to GreenPulse! Here’s how you can help:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Make your changes and commit them (`git commit -m "Added feature"`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a Pull Request.
 
-### Edit the .env file
+---
 
-Copy .env.example to .env and fill in the appropriate values.
+## **License**
+GreenPulse is licensed under the MIT License. See the `LICENSE` file for more details.
 
-```
-cp .env.example .env
-```
+---
 
-Note: .env is optional. If your planning to run multiple distinct agents, you can pass secrets through the character JSON
+## **Acknowledgments**
+GreenPulse relies on data from reputable organizations like NASA and NOAA. Special thanks to the open-source community for tools and libraries that make this project possible.
 
-### Automatically Start Eliza
+---
 
-This will run everything to setup the project and start the bot with the default character.
+## **Follow GreenPulse**
+Stay updated with the latest climate insights and tips:
+- [Twitter: @GreenPulse](https://x.com/green_puls4111)
 
-```bash
-sh scripts/start.sh
-```
+---
 
-### Edit the character file
-
-1. Open `packages/core/src/defaultCharacter.ts` to modify the default character. Uncomment and edit.
-
-2. To load custom characters:
-    - Use `pnpm start --characters="path/to/your/character.json"`
-    - Multiple character files can be loaded simultaneously
-3. Connect with X (Twitter)
-    - change `"clients": []` to `"clients": ["twitter"]` in the character file to connect with X
-
-### Manually Start Eliza
-
-```bash
-pnpm i
-pnpm build
-pnpm start
-
-# The project iterates fast, sometimes you need to clean the project if you are coming back to the project
-pnpm clean
-```
-
-#### Additional Requirements
-
-You may need to install Sharp. If you see an error when starting up, try installing it with the following command:
-
-```
-pnpm install --include=optional sharp
-```
-
-### Community & contact
-
-- [GitHub Issues](https://github.com/elizaos/eliza/issues). Best for: bugs you encounter using Eliza, and feature proposals.
-- [Discord](https://discord.gg/ai16z). Best for: sharing your applications and hanging out with the community.
-
-## Contributors
-
-<a href="https://github.com/elizaos/eliza/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=elizaos/eliza" />
-</a>
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=elizaos/eliza&type=Date)](https://star-history.com/#elizaos/eliza&Date)
+Feel free to suggest any additional sections or refinements!
